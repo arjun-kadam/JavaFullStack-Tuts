@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean name="client1" class="com.springcore.contructorInjection.Client">
+        <constructor-arg name="name" value="TCS"/>
+        <constructor-arg name="projectName" value="NEET Exam Portal"/>
+        <constructor-arg name="budget" value="1000"/>
+        <constructor-arg name="worker" ref="worker1"/>
+    </bean>
+    
+    <bean name="worker1" class="com.springcore.contructorInjection.Worker">
+        <property name="name" value="FlyHigh Services"/>
+        <property name="noOfEmployees" value="100"/>
+        <property name="time" value="3.5"/>
+    </bean>
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean name="connection" class="com.springcore.beanlifecycle.DummyConnection" init-method="setConnection" destroy-method="closeConnection">
+        <constructor-arg name="input" value="Creating Object"/>
+    </bean>
+    
+    <bean name="connection2" class="com.springcore.beanlifecycle.UsingSpringInterface">
+        <constructor-arg name="input" value="Object Setting"/>
+    </bean>
+</beans>

@@ -15,4 +15,8 @@
         <property name="noOfEmployees" value="100"/>
         <property name="time" value="3.5"/>
     </bean>
+    <bean name="ambiguity" class="com.springcore.contructorInjection.CIAmbiguity" >
+        <constructor-arg name="a" value="1" type="float"/>
+        <constructor-arg name="b" value="2" type="float"/>
+    </bean>
 </beans>
